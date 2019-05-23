@@ -1,0 +1,30 @@
+{
+  "name": "monopoly",
+  "version": "1.0.0",
+  "description": "package.json for Monopoly game",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comeandgitsomeknowledge/monopoly.git"
+  },
+  "keywords": [
+    "monopoly",
+    "game"
+  ],
+  "author": "ComeAndGitSomeKnowledge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/comeandgitsomeknowledge/monopoly/issues"
+  },
+  "homepage": "https://github.com/comeandgitsomeknowledge/monopoly#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
