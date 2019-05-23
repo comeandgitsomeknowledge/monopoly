@@ -1,0 +1,7 @@
+Follow these steps to install node package manager and Node.js:
+    1. Install the LTS (v10.15.3) version from https://nodejs.org/en/
+
+Follow these steps to install Mocha:
+    1. In command line run "npm install --save-dev mocha"
+    
+Follow theses steps to install Chai:
