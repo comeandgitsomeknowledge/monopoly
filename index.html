@@ -10,10 +10,35 @@
 	<!-- <script type="text/javascript" src="newyorkcityedition.js"></script> -->
 	<script type="text/javascript" src="ai.js"></script>
 	<script type="text/javascript" src="monopoly.js"></script>
+
+
+	<!-- Unit Testing stuff with mocha START-->
+	<script src="./node_modules/mocha/mocha.js"></script>
+	<script src="./node_modules/chai/chai.js"></script>
+	<script>
+		mocha.setup('bdd');
+		mocha.ui('bdd');
+		mocha.reporter('html');
+
+		function showMocha(){
+			var mocha = document.getElementById("mocha");
+  			mocha.style.visibility = "visible";
+		}
+	</script>
+	<script type="text/javascript" src="./test/basic_test.js"></script>
+	<script type="text/javascript" src="./test/roll_dice_test.js"></script>
+	<link rel="stylesheet" href="node_modules/mocha/mocha.css">
+	<!-- Unit Testing stuff with mocha END-->
+
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
+	<button onclick="showMocha()">
+		Show Mocha Test Results
+	</button>
+	<span id="mocha" style="visibility: hidden;"></span>
+	
 	<div id="popupbackground"></div>
 	<div id="popupwrap">
 		<div id="popup">
@@ -562,6 +587,5 @@
 			</tr>
 		</table>
 	</div>
-
 </body>
 </html>
