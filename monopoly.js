@@ -12,10 +12,10 @@ function Game() {
 	this.rollDice = function(d1, d2) {
 		die1 = Math.floor(Math.random() * 6) + 1;
 		die2 = Math.floor(Math.random() * 6) + 1;
-		if (d1 !== null){
+		if (d1 !== undefined){
 			die1 = Math.floor(d1);
 		}
-		if (d2 !== null){
+		if (d2 !== undefined){
 			die2 = Math.floor(d2);
 		}
 		areDiceRolled = true;
