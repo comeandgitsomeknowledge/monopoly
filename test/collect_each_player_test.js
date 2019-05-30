@@ -11,8 +11,12 @@ describe('Collect from Each Player Tests', function () {
         collectfromeachplayer(50, "Testing Fine");
         updateMoney();
 
+<<<<<<< HEAD
         assert.deepEqual(player[1].money, 650, "Player 1 ends with $1450");
         assert.deepEqual(player[2].money, 1600, "Player 2 ends with $1600");
+=======
+        assert.deepEqual(player[2].money, 1450, "Player 2 ends with $1450");
+>>>>>>> 10eab6e00f5b0ba93ad284305ee368d7d56282ca
         assert.deepEqual(player[3].money, 1450, "Player 3 ends with $1450");
     });
 
@@ -26,7 +30,11 @@ describe('Collect from Each Player Tests', function () {
     });
 
     it('removes exactly remaining money from players', function () {
+<<<<<<< HEAD
         assert.deepEqual(player[1].money, 600, "Player 1 starts with $600");
+=======
+        assert.deepEqual(player[2].money, 1400, "Player 2 starts with $1400");
+>>>>>>> 10eab6e00f5b0ba93ad284305ee368d7d56282ca
         assert.deepEqual(player[3].money, 1400, "Player 3 starts with $1400");
 
         collectfromeachplayer(1400, "Broooooke");
