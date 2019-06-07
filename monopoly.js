@@ -9,10 +9,17 @@ function Game() {
 	var currentbidder = 1;
 	var auctionproperty;
 
-	this.rollDice = function() {
+	this.rollDice = function(d1, d2) {
 		die1 = Math.floor(Math.random() * 6) + 1;
 		die2 = Math.floor(Math.random() * 6) + 1;
+		if (d1 !== undefined){
+			die1 = Math.floor(d1);
+		}
+		if (d2 !== undefined){
+			die2 = Math.floor(d2);
+		}
 		areDiceRolled = true;
+
 	};
 
 	this.resetDice = function() {
@@ -2415,7 +2422,7 @@ function land(increasedRent) {
 	}
 }
 
-function roll() {
+function roll(d1,d2) {
 	var p = player[turn];
 
 	$("#option").hide();
@@ -2428,7 +2435,7 @@ function roll() {
 	document.getElementById("nextbutton").value = "End turn";
 	document.getElementById("nextbutton").title = "End turn and advance to the next player.";
 
-	game.rollDice();
+	game.rollDice(d1,d2);
 	var die1 = game.getDie(1);
 	var die2 = game.getDie(2);
 
@@ -2456,7 +2463,7 @@ function roll() {
 
 
 			if (p.human) {
-				popup("You rolled doubles three times in a row. Go to jail.", goToJail);
+				popup("You rolled doubles three times in a row. Go to jail.", gotojail);
 			} else {
 				gotojail();
 			}
@@ -2495,7 +2502,6 @@ function roll() {
 
 				if (p.human) {
 					popup("<p>You must pay the $50 fine.</p>", function() {
-						payFifty();
 						payfifty();
 						player[turn].position=10 + die1 + die2;
 						land();
