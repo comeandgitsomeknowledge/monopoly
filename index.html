@@ -26,7 +26,7 @@
 		}
 	</script>
 	<!-- <script type="text/javascript" src="./test/basic_test.js"></script> -->
-	<!-- <script type="text/javascript" src="./test/jail_test.js"></script> -->
+	<script type="text/javascript" src="./test/jail_test.js"></script>
 	<script type="text/javascript" src="./test/manage_property_test.js"></script>
 	<link rel="stylesheet" href="node_modules/mocha/mocha.css">
 	<!-- Unit Testing stuff with mocha END-->
@@ -257,10 +257,11 @@
 						<div>$<span id="p7money">1500</span></div>
 					</td>
 				</tr>
-				<tr id="moneybarrow8">
-					<td style="border: none;" class="moneybararrowcell">&nbsp;</td>
-					<td style="border: none;">
-						<input type="button" id="viewstats" value="View stats" title="View a pop-up window that shows a list of each player's properties." />
+				<tr id="moneybarrow8" class="money-bar-row">
+					<td class="moneybararrowcell"><img src="images/arrow.png" id="p8arrow" class="money-bar-arrow" alt=">" /></td>
+					<td id="p8moneybar" class="moneybarcell">
+						<div><span id="p8moneyname" >Player 8</span>:</div>
+						<div>$<span id="p8money">1500</span></div>
 					</td>
 				</tr>
 			</table>
