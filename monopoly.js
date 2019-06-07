@@ -1526,7 +1526,7 @@ function updateOwned() {
 	} else if (firstproperty > -1) {
 		document.getElementById("propertycheckbox" + firstproperty).checked = true;
 	}
-	$(".property-cell-row").click(function() {
+	$(".propertycellcheckbox").click(function() {
 		var row = this;
 
 		// Toggle check the current checkbox.
